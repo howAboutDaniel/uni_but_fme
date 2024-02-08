@@ -44,7 +44,7 @@ def rndwalk(lb, ub, dim, objfunc):
 
 def main():
     # rndwalk(lb=2, ub=4.5, dim=2, objfunc=f)
-    x, fx = rndwalk(2, 4.5, 10, f)
+    x, fx = rndwalk(2, 4.5, 2, f)
     print('x:', x)
     print('f(x):', fx)
 
