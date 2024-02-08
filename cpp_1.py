@@ -12,12 +12,14 @@ def rndwalk(lb, ub, dim, objfunc):
         objfunc - ucelova funkce, musi byt Callable
     """
     # TODO: inicializace; nejlepsi reseni je nutno si pamatovat
-    best_x = None
-    best_fx = None
+    best_x = np.random.uniform(lb, ub, dim)
+    best_fx = objfunc(best_x)
     # TODO: aktualni reseni
-    x: np.ndarray = None
+    x: np.ndarray = best_x.copy()
 
     # TODO: max velikost kroku z rozsahu intervalu
+
+    max_step = (ub-lb)* 0.01
 
     # TODO: iterace algoritmu
     #      krok
