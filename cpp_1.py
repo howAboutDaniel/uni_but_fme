@@ -22,9 +22,22 @@ def rndwalk(lb, ub, dim, objfunc):
     max_step = (ub-lb)* 0.01
 
     # TODO: iterace algoritmu
-    #      krok
-    #      kontrola mezi
-    #      ulozeni nejelpsiho
+    #      1) krok
+    #      2) kontrola mezi
+    #      3) ulozeni nejelpsiho
+
+    for i in range(1000):
+        step = np.random.uniform(-max_step, max_step, dim) # pozri si co robi metoda uniform()
+        x += step
+
+    if any(x < lb) or any(x > ub): # 2) kontrola medzí
+        x = np.random.uniform(lb, ub, dim)
+
+    fx = objfunc(x) # pozri si funkciu objfunc
+    if fx < best_fx:
+        best_fx = fx
+        best_x = x.copy()
+
     
     return best_x, best_fx
 
