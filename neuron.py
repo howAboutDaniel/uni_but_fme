@@ -24,13 +24,15 @@ class ANN_XOR:
         return self.n[2].apply(self.y12)
     
     def set_params(self, p: np.ndarray):
-        self.n.w[0] = p[0]
-        self.n[0].b = p[1]
-        self.n[1].w[0] = p[2]
-        self.n[1].b = p[3]
-        self.n[2].w[0] = p[4]
-        self.n[2].w[1] = p[5]
-        self.n[2].b = p[6]
+        self.n[0].w[0] = p[0]
+        self.n[0].w[1] = p[1]
+        self.n[0].b = p[2]
+        self.n[1].w[0] = p[3]
+        self.n[1].w[1] = p[4]
+        self.n[1].b = p[5]
+        self.n[2].w[0] = p[6]
+        self.n[2].w[1] = p[7]
+        self.n[2].b = p[8]
         
     
 def main():
