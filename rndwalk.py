@@ -26,7 +26,7 @@ def rndwalk(lb, ub, dim, objfunc):
     #      2) kontrola mezi
     #      3) ulozeni nejelpsiho
 
-    for i in range(1000):
+    for i in range(100000):
         step = np.random.uniform(-max_step, max_step, dim) # pozri si co robi metoda uniform()
         x += step
 
