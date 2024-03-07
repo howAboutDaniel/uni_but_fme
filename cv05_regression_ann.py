@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 # fc = @(x) 2*sin(x*5+8);
-def fc(x: np.ndarray):
+def fx(x: np.ndarray):
     return 2*np.sin(x*5+8)
 
 N = 140
